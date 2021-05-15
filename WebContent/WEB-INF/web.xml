@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+	<servlet>
+		<servlet-name>PlaceOrder</servlet-name>
+		<servlet-class>place_order.place_order_servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PlaceOrder</servlet-name>
+		<url-pattern>/PlaceOrder</url-pattern>
+	</servlet-mapping>
+	
+   
+	<servlet>
+		<servlet-name>InsertOrderDetails</servlet-name>
+		<servlet-class>place_order.Order_insert</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InsertOrderDetails</servlet-name>
+		<url-pattern>/InsertOrderDetails</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateLocation</servlet-name>
+		<servlet-class>place_order.updateLocationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateLocation</servlet-name>
+		<url-pattern>/update</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteOrder</servlet-name>
+		<servlet-class>place_order.deleteOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteOrder</servlet-name>
+		<url-pattern>/cancelTrip</url-pattern>
+	</servlet-mapping>
+</web-app>
