@@ -19,16 +19,17 @@ public class Order_insert extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//store order details in variables
+		
 		String pickup = request.getParameter("location");
 		String destination = request.getParameter("destination");
 		String transportType = request.getParameter("type");
-		int noOfPassenger = request.getIntHeader("no");
+		int noOfPassenger = Integer.parseInt(request.getParameter("no"));
 		String time = request.getParameter("time");
 		
 		boolean True;
-		True = place_order_DB_util.insertOrder(pickup, destination, transportType, noOfPassenger, time);
+		True = DatabaseManager.getInstance().insertOrder(pickup, destination, transportType, noOfPassenger, time);
 		 if(True == true) {
-			 RequestDispatcher dispatcher = request.getRequestDispatcher("sucess.jsp");
+			 RequestDispatcher dispatcher = request.getRequestDispatcher("placeOrder.jsp");
 			 dispatcher.forward(request, response);
 		 }
 		 else {

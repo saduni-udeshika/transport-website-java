@@ -29,7 +29,7 @@ public class place_order_servlet extends HttpServlet {
 		try {
 			
 			//call validate method and create list object
-			List<Order> orderDetails = place_order_DB_util.validate(transportType, location);
+			List<Order> orderDetails = DatabaseManager.getInstance().validate(transportType, location);
 			request.setAttribute("orderDetails", orderDetails);
 		}
 		catch (Exception e) {

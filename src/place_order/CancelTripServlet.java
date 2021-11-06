@@ -1,7 +1,6 @@
 package place_order;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,26 +10,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/updateLocationServlet")
-public class updateLocationServlet extends HttpServlet {
+@WebServlet("/CancelTripServlet")
+public class CancelTripServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		String oid = request.getParameter("orderID");
-		String destination = request.getParameter("destination");
 		
-		boolean updateTrue;
+		boolean cancelTrue;
+		cancelTrue = DatabaseManager.getInstance().deleteOrder(oid);
 		
-		updateTrue = DatabaseManager.getInstance().updateOrder(oid, destination );
-
-		if(updateTrue == true) {
+		if(cancelTrue == true) {
 			
-			List <Order> orderDetails = DatabaseManager.getInstance().getOrderDetails(oid);
-			request.setAttribute("orderDetails", orderDetails);
-			
-			RequestDispatcher dispatcher = request.getRequestDispatcher("orderDetails.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("insert_order.jsp");
 			dispatcher.forward(request, response);
 		}
 		else {
@@ -38,4 +30,5 @@ public class updateLocationServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 		}
 	}
+
 }

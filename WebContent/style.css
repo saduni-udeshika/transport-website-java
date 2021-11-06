@@ -1,0 +1,98 @@
+@charset "ISO-8859-1";
+body{
+	font-family: 'Roboto', sans-serif;
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+.home{
+	background-color: #f0f0f0;
+}
+.navbar-brand{
+	margin-left:5% ;
+}
+.navbar-nav{
+	padding:0 2%;
+	font-size:1.15rem;
+	letter-spacing: 2px;
+}
+.nav-item{
+	margin:0.1%;
+}
+/*background image*/
+.banner-area{
+	width:100%;
+	height:100vh;
+	background:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url(img/home.jpg);
+	background-size:cover;
+}
+.content-area{
+	height:100%;
+	display:flex;
+	justify-content:center;
+	align-items: center;
+}
+.content{
+	text-align:center;
+}
+.content h1{
+	color:#fff;
+	font-size:80px;
+	font-weight:bold;
+}
+.content p{
+	font-size:30px;
+	color:#ddd;
+}
+/* discription area*/
+.container{
+	width:70%;
+	margin:50px auto;
+	padding:10px;
+}
+.container .box{
+	width:100%;
+	padding:50px;
+	background:#fff;
+	margin-top:50px;
+	border-radius:9px;
+	box-shadow:0 0 10px -3px rgba(0, 0, 0, 0.1);
+}
+/*footer*/
+footer{
+	padding: 2% 15%;
+	text-align:center;
+}
+.icons{
+	height:20px;
+	margin:5px;
+}
+/*orderDetails jsp*/
+.head{
+	color:white;
+}
+.container{
+	background-color:#f0f0f0;
+	text-align:left;
+	margin-left:5%;
+}
+/*updateLocation jsp file*/
+.input-group{
+	font-family: 'Roboto', sans-serif;
+}
+/*insert jsp*/
+.insertForm{
+	background-color: #f0f0f0;
+}
+.card{
+	margin:1%;
+}
+/*delete*/
+.delete{
+	margin:1%;
+	
+}
+/*serch bar*/
+.search{
+	margin:5px;
+}

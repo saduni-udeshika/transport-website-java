@@ -14,8 +14,7 @@
 		<servlet-name>PlaceOrder</servlet-name>
 		<url-pattern>/PlaceOrder</url-pattern>
 	</servlet-mapping>
-	
-   
+	  
 	<servlet>
 		<servlet-name>InsertOrderDetails</servlet-name>
 		<servlet-class>place_order.Order_insert</servlet-class>
@@ -31,15 +30,15 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>UpdateLocation</servlet-name>
-		<url-pattern>/update</url-pattern>
+		<url-pattern>/updateLocation</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>DeleteOrder</servlet-name>
-		<servlet-class>place_order.deleteOrderServlet</servlet-class>
+		<servlet-name>CancelTrip</servlet-name>
+		<servlet-class>place_order.CancelTripServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>DeleteOrder</servlet-name>
+		<servlet-name>CancelTrip</servlet-name>
 		<url-pattern>/cancelTrip</url-pattern>
 	</servlet-mapping>
 </web-app>
